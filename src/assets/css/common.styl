@@ -1,0 +1,534 @@
+
+.serverContent
+    width contentWidth
+    margin 0 auto
+    height contentHeight 
+    background contentBgColor
+    position relative
+    font-size: 12px;
+
+.server_content_header
+    height tableHeaderHeight
+    width 100%
+    padding tableHeaderpadding 
+    border-bottom 1px solid tableHeaderBorderColor
+    line-height tableHeaderHeight
+    position relative
+    flex()
+
+.reportSystem_content_header
+    height tableHeaderHeight
+    width 100%
+    padding tableHeaderpadding
+    border-bottom 1px solid tableHeaderBorderColor
+    line-height tableHeaderHeight
+    position relative
+    flex()
+
+.exportReport_content_header
+    height 120px
+    width 97%
+    margin 0 auto
+    line-height @height 
+    text-align: center
+    font-size 30px
+    border-bottom 2px solid #e9411f
+    font-weight bold
+
+.exportReport_content_title
+    height 60px
+    line-height @height
+    width 95%
+    font-size:0.15 rem
+    margin 20px auto
+    font-weight bold
+    border-bottom 1px solid #000000
+
+.exportReport_content_chartDiv
+    position relative
+    width 100%
+    height 2.333rem
+
+.exportReport_content_desc
+    width 95%
+    margin 0 auto
+    font-weight bold
+    padding: 50px 0
+    font-size 0.15 rem
+    .exportReport_content_desc_item
+        label
+            width: 180px
+            text-align: right;
+        span
+            text-align: left;
+
+    
+.height0Tr
+    height 0px;
+    th
+        height 0px!important
+.table
+    width: 100%;
+    table-layout: fixed;
+    tbody
+        tr
+            transition all 0.1s
+            &:hover
+                background: tableHoverColor
+
+    .table_thead
+        font-size: tableHeaderFontSize;
+        color: tableHeaderColor
+        background: tableTheadBg
+        th
+            border-left: none 
+            border-right: none
+            font-weight: bold
+    
+    td
+        border-left: none 
+        border-right: none
+        font-size: tableContentFontSize;
+
+.checkBox
+    display inline-block
+    height 17px
+    width @height
+    border checkBoxBorder
+    background checkBoxBg
+    color: checkBoxColor
+    line-height @height - 1px
+    cursor pointer
+    font-size: 16px;
+    vertical-align: middle;
+
+.checkBoxDisable
+    color: offLineColor
+    border:1px solid #c3c3c3
+
+.ivu-modal{
+    font-size: 12px;
+}
+
+.ivu-modal-content
+    background: dialogBG!important
+.ivu-poptip
+    height 100%!important
+.ivu-poptip-popper 
+    min-width: 40px!important
+    text-align center!important
+.ivu-poptip .ivu-poptip-rel
+    height 100%!important
+.ivu-poptip-inner
+    background: dialogBG!important
+.ivu-poptip-inner .ivu-poptip-title
+    display: none!important
+.ivu-poptip-popper .ivu-poptip-arrow
+    border-bottom-color:dialogBG!important
+    &:after
+        border-bottom-color:dialogBG!important
+        border-left-color:dialogBG!important
+        border-right-color:dialogBG!important
+
+.ivu-modal-header-inner
+    color: white!important
+.ivu-modal-header
+    border-bottom: 1px solid menuBorderColor!important;
+.ivu-date-picker .ivu-input{
+    background: none!important
+    border: 1px solid rgb(61, 145, 173)!important
+    color: #eaebed!important;
+    font-size: 0.05rem!important;
+}
+.ivu-cascader .ivu-input{
+    background: none!important;
+    border: 1px solid rgb(61, 145, 173)!important;
+    color: #eaebed!important;
+    font-size: 0.05333rem!important;
+} 
+.ivu-cascader .ivu-select-dropdown{
+    max-height:300px!important;
+}
+.ivu-cascader-menu{
+    height:200px!important;
+}
+.ivu-cascader .ivu-cascader-menu-item{
+    color: #eaebed!important;
+}
+.ivu-cascader-menu .ivu-cascader-menu-item-active {
+    background-color: #f3f3f3;
+    color: #000!important;
+}
+.ivu-cascader .ivu-cascader-menu-item:hover{
+    color: #000!important;
+}
+.ivu-select-selection{
+    background: none!important;
+    border: 1px solid rgb(61, 145, 173)!important;
+    color: #eaebed!important;
+    font-size: 0.05rem!important;
+    border-radius: 0!important;
+}
+.ivu-select-item
+    color: white!important
+    &:hover
+        background: #cb9a04
+
+.ivu-select-item-selected{
+    background: #cb9a04!important
+    color: white!important
+}
+.vq_right_top_date .ivu-input{
+    background: #06183e!important;
+    border: 1px solid rgb(61, 145, 173)!important;
+    color: #eaebed!important;
+    font-size: 0.05rem!important;
+}
+
+span.ivu-date-picker-cells-cell-disabled, span.ivu-date-picker-cells-cell-disabled:hover{
+    background: #06294d!important
+}
+.ivu-date-picker-cells-cell:hover em{
+    background: #0895ee!important
+}
+.ivu-btn-text{
+    color:#3399ff!important
+}
+
+.ivu-time-picker-cells-cell:hover{
+    background: #0895ee!important
+}
+.el-checkbox__inner{
+    width: 15px!important;
+    height: 15px!important;
+    border 1px solid #01d4f6!important
+    background #132a59!important
+    color #e8ba27!important
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    border 1px solid #01d4f6!important
+    background #132a59!important
+    color #e8ba27!important
+}
+.el-checkbox__inner::after{
+    border: 3px solid #e8ba27!important;
+    border-left: 0!important;
+    border-top: 0!important;
+    left 4px!important
+    top 0!important
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner::before{
+    height 5px!important
+    top 4px!important
+    background-color #e8ba27!important
+}
+.el-carousel__button{
+    width: 12px!important;
+    height: 12px!important;
+    border-radius: 12px!important;
+}
+
+.el-carousel{
+    width:100%!important;
+}
+
+.table-skipButton{
+    background: table-skipButtonBg;
+    border: table-skipButtonBorder;
+    color: table-skipButtonColor;
+    font-size:13px!important;
+    border-radius:2px;
+    height 25px
+    line-height: 22px
+}
+
+.table-selectContainer{
+    height: 25px;
+    line-height: 22px;
+}
+
+.ivu-select-multiple .ivu-select-selection .ivu-select-placeholder{
+    color: white!important
+    font-size: 0.05rem!important;
+}
+
+.table-paginationContainer{
+    font-size:14px!important;
+}
+.table-skipPage{
+    width:60px!important;
+    height:24px!important;
+    background:table-selectStyleBg
+    border: table-selectStyleBorder
+    border-radius:2px!important;
+}
+.table-header-container{
+    height:42px!important;
+}
+.table-selectStyle{
+    color: table-selectStyleColor;
+    background:table-selectStyleBg;
+    border: table-selectStyleBorder;
+}
+.ivu-select-arrow{
+    color: #00e0ff!important
+}
+.ivu-upload{
+    display: inline-block!important;
+}
+.swiperImg {
+    width:100%!important
+    height:100%!important
+}
+
+.ivu-message-notice-content{
+    padding 15px 35px
+    font-size: 20px!important;
+}
+
+.ivu-message-notice-content-text  .ivu-icon {
+    font-size: 22px!important;
+}
+.ivu-cascader .ivu-input{
+    height:.1rem!important;
+    line-height:.1rem!important;
+}
+.ivu-input{
+    padding:0 7px!important;
+    height:.1rem!important;
+    line-height:.1rem!important;
+}
+.ivu-input-icon{
+    height:.1rem!important;
+    line-height:.1rem!important;
+}
+.ivu-btn{
+    height:.1rem!important;
+    line-height:.05rem!important;
+}
+
+.ivu-poptip-body-content{
+    color: ivuPoptipBodyContentColor
+}
+.yl-label1
+    width 100%
+    height 50px
+    text-align left 
+    font-weight bold
+    flex()
+    white-space: nowrap;
+    font-size 12px
+    >span:nth-child(1)
+        width 3px
+        height 24px
+        display inline-block
+        background labelBg
+        margin-right 10px
+    >span:nth-child(2)
+        font-size moduleFontSize
+        color labelColor
+
+.yl-label2
+    width 100%
+    height 50px
+    text-align left 
+    font-weight normal
+    flex()
+    white-space: nowrap;
+    font-size 12px
+    >span:nth-child(1)
+        width 3px
+        height 24px
+        display inline-block
+        background labelBg2
+        margin-right 10px
+    >span:nth-child(2)
+        font-size moduleFontSize
+        color labelColor2
+.right-content
+    position absolute
+    top 0
+    bottom 0
+    left leftNavWidth
+    right 0
+    padding .033333rem 
+.boldtitle
+    font-size moduleFontSize
+.el-tabs__nav   
+    padding-left: 10px!important
+.el-tabs__nav .el-tabs__item
+    color #fff!important
+    font-size 14px
+.el-tabs__nav .el-tabs__item.is-active
+    color rgba(96,221,251,0.9)!important
+.el-tabs__active-bar
+    background-color rgba(96,221,251,0.9)!important
+.el-tabs
+    height calc(100% - 0.2rem)!important
+.el-tabs__content
+    height calc(100% - 60px)!important
+.el-tab-pane
+    height 100%!important
+.el-carousel__indicator
+    padding 4px!important
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value 
+    height .1rem!important
+    line-height .1rem!important
+.ivu-select-single .ivu-select-selection
+    height .1rem!important
+.table-skipPage
+    color table-selectStyleColor
+.repeatBox
+    padding 5px 5px 10px 5px 
+    box-sizing border-box
+    margin 5px 0
+    border-radius 5px
+    background repeatBoxBg
+    header
+        height 25px
+        flex()
+        .yl-shu1
+            width:3px;
+            height:24px;
+            line-height: 24px;
+            display:inline-block;
+            background labelColor
+            margin-right:10px;
+        .yl-txt1
+            height:24px;
+            line-height: 24px;
+            display:inline-block;
+            font-size:0.055rem;
+            color labelColor
+            max-width 85%
+            ellipsis()
+    ul
+        overflow hidden
+    .liItem
+        height 35px
+        width 1.066667rem
+        line-height 30px
+        font-size tableContentFontSize
+        float left
+        text-align left
+        margin 5px
+        cursor pointer
+        ellipsis()
+        flex()
+        label
+            width 100px
+            margin-left 5px
+            ellipsis()
+            cursor pointer
+.ivu-poptip-popper .ivu-poptip-arrow:after
+    top 5px!important
+
+//查询头部公共样式
+.topDivWrap
+    position: relative;
+    margin: 0 auto;
+    background: topDivWrapBg;
+    border: topDivWrapBorder;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 15px 25px;
+    float: left;
+    width: 100%;
+    .topDivUl
+        float left
+        width 100%
+        .topDivLi
+            float left
+            position: relative;
+            margin: 2px 10px;
+            height: 35px;
+            line-height: 35px;
+            font-size:0.053333rem;
+            label
+                color topDivWrap_ul_li_labelColor
+                margin-right 5px
+            .topDivInput 
+                width 0.55rem
+                padding-left: 5px;
+            .topDivSelect
+                width 0.55rem
+//查询内容公共样式
+.conDivWrap
+    position: relative;
+    float: left;
+    width: 100%;
+
+.conDivWrap
+    background topDivWrapBg
+    margin-top 5px;
+    position relative
+    height: calc(100% - 110px);
+    .conDivWrapHead
+        padding: 0 20px;
+        height 40px
+        line-height 40px
+        border-bottom: 1px solid rgba(1,201,227,0.3);
+        flex()
+        justify-content: flex-end;
+    .conDivWrapCon
+        position absolute
+        top 40px
+        bottom 0
+        left 0
+        right 0
+
+.m-t5
+    margin-top 5px
+
+@media screen and (max-width: 1920px) {
+    .pubSize {
+        font-size:0.053333rem!important
+    }
+} 
+
+@media screen and (max-width: 1600px) {
+    .pubSize {
+        font-size:0.05rem!important
+    }
+} 
+
+@media (max-width: 1440px) {
+    .pubSize {
+        font-size:0.05rem!important
+    }
+} 
+
+@media (max-width: 1280px) {
+    .pubSize {
+        font-size:0.05rem!important
+    }
+}  
+
+.el-notification{
+    background: rgb(7, 88, 183);
+    border: none;
+    z-index: 3335 !important;
+}
+.el-notification__group{
+    width: 100%;
+    margin: 0;
+}
+
+.ivu-date-picker-cells-cell-range:before{
+    background: #2d8cf0!important;
+}
+
+//主子表按钮及头部样式
+.btoperate
+    margin: auto 5px
+    border: none
+    color: masterTable_childTable_opreatBT_color
+    cursor: pointer
+    background: none
+.childTableHeadStyle
+    border: masterTable_childTable_headBorder;
+    color: masterTable_childTable_headFont_color;
+    th
+        font-size: 0.053333rem!important;
+    &:hover
+        background: none!important  

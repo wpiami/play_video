@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>video_test</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/master.css">
+
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 640) {
+                        //docEl.style.fontSize = '100px';
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        //兼容 transfer-dom.js中 使用了 dataset 的问题
+
+        if (window.HTMLElement) {
+            if (Object.getOwnPropertyNames(HTMLElement.prototype).indexOf('dataset') === -1) {
+                Object.defineProperty(HTMLElement.prototype, 'dataset', {
+                    get: function() {
+                        var attributes = this.attributes; //获取节点的所有属性
+                        var name = [],
+                            value = []; //定义两个数组保存属性名和属性值
+                        var obj = {}; //定义一个空对象
+                        for (var i = 0; i < attributes.length; i++) { //遍历节点的所有属性
+                            if (attributes[i].nodeName.slice(0, 5) == 'data-') { //如果属性名的前面5个字符符合"data-"
+                                // 取出属性名的"data-"的后面的字符串放入name数组中
+                                name.push(attributes[i].nodeName.slice(5));
+                                //取出对应的属性值放入value数组中
+                                value.push(attributes[i].nodeValue);
+                            }
+                        }
+                        for (var j = 0; j < name.length; j++) { //遍历name和value数组
+                            obj[name[j]] = value[j]; //将属性名和属性值保存到obj中
+                        }
+                        return obj; //返回对象
+                    }
+                });
+            }
+        }
+    </script>
+    <script type="text/javascript" src="/static/views/common/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/static/views/common/ckplayer/ckplayer.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

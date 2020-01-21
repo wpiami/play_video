@@ -1,0 +1,1021 @@
+/* 公用样式
+ * Created by fenghui on 2016/10/17.
+ */
+
+body {
+    /* background:url(../images/background.png) no-repeat; */
+    color: white!important;
+    height: 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    font-size: 14px;
+}
+
+.text {
+    color: white;
+    /* background: rgba(2, 156, 255, 0.1); */
+    background: none;
+    border: 1px solid rgb(61, 145, 173);
+    height: .1rem;
+    line-height: .1rem;
+    width: 170px;
+    padding-left: 10px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+select {
+    font-size: 12px;
+    margin: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*很关键：将默认的select选择框样式清除*/
+    /* padding-right: 14px;  为下拉小箭头留出一点位置，避免被文字覆盖 */
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+ :focus {
+    outline: none;
+}
+
+.queryBox {
+    margin: 0 12px;
+    font-size: 15px;
+    font-weight: normal;
+    position: relative;
+}
+
+.select {
+    color: #fff;
+    /* background: #0e2863 url("../images/arrow2.png") no-repeat scroll right center!important; */
+    background: url("../image/下箭头.png") no-repeat 94% center;
+    background-color: none;
+    background-size: 15px;
+    border: 1px solid rgb(61, 145, 173);
+    padding-left: 10px;
+}
+
+option {
+    background: rgb(6, 26, 63);
+}
+
+.textDisable {
+    background: rgba(140, 150, 159, 0.6)!important;
+}
+
+.selectDisable {
+    background: rgba(140, 150, 159, 0.6) url("../../images/arrow.png") no-repeat scroll right center!important;
+}
+
+.width_select {
+    width: 150px;
+}
+
+.more {
+    background: url("/static/image/更多.png") no-repeat scroll 98% center!important;
+    cursor: pointer;
+    padding-right: 35px;
+}
+
+.calendar {
+    background: url("/static/image/时间选择.png") no-repeat 98% center!important;
+    background-size: 9%!important;
+}
+
+.text_time {
+    background: url("/static/image/text_time.png") no-repeat scroll 98% center!important;
+}
+
+.button {
+    background: rgb(32, 87, 130);
+    border: 1px solid rgb(86, 199, 230);
+    border-radius: 3px;
+    height: .1rem;
+    line-height: .1rem;
+    width: .283333rem;
+    color: white;
+    cursor: pointer;
+    font-size: .06rem;
+    margin-left: 3px
+}
+
+.button_grey{
+    background: rgb(103, 107, 111);
+    border: 1px solid rgb(127, 134, 136);
+    border-radius: 3px;
+    height: .1rem;
+    line-height: .1rem;
+    width: .283333rem;
+    color: white;
+    cursor: pointer;
+    font-size: .06rem;
+    margin-left: 3px
+}
+
+
+/*.button:active{
+    padding-top: 2px;
+}*/
+
+
+/* .button:hover {
+    color: orange;
+} */
+
+.checkbox {
+    vertical-align: middle;
+}
+
+.channelBox {
+    width: 160px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #0A578A;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #06253A;
+    box-shadow: inset 0 0 5px #0A578A;
+    cursor: pointer;
+}
+
+.channelBoxSelected {
+    /* 单选频道块样式*/
+    /* width: 160px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid orange!important;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #06253A;
+    box-shadow: inset 0 0 20px orange!important; */
+    color: orange;
+}
+
+.channelBox:hover {
+    box-shadow: inset 0 0 10px orange;
+    border: 1px solid orange;
+}
+
+.channelBox::before {
+    content: "\2714";
+    display: block;
+    position: absolute;
+    top: -6px;
+    bottom: 0;
+    right: -7px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background: #00c09e;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    /*-ms-transition: 0.2s linear;*/
+    -moz-transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    /*-o-user-select: none;*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.channelBoxMultiSelected::before {
+    /* 多选频道块样式*/
+    opacity: 1;
+}
+
+
+/* 带删除样式开始*/
+
+.schemeBox {
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    /* width: 140px; */
+    padding: 0 20px;
+    background: -moz-linear-gradient(top, rgba(70, 153, 255, 0.4) 0%, rgba(4, 97, 251, 0.4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(70, 153, 255, 0.4)), color-stop(100%, rgba(4, 97, 251, 0.4)));
+    background: -webkit-linear-gradient(top, rgba(70, 153, 255, 0.4) 0%, rgba(4, 97, 251, 0.4) 100%);
+    background: linear-gradient(to bottom, rgba(70, 153, 255, 0.4) 0%, rgba(4, 97, 251, 0.4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='rgba(70,153,255,0.4)', endColorstr='rgba(4,97,251,0.4)', GradientType=0);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    font-family: "微软雅黑", "Trebuchet MS", sans-serif;
+    border: 1px solid #0580d6;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    position: relative;
+}
+
+.schemeBoxSelected {
+    border: 1px solid orange;
+    box-shadow: inset 0 0 20px orange;
+}
+
+
+/*.schemeBox:active{
+    padding-top: 2px;
+}*/
+
+.schemeBox:hover {
+    color: orange;
+}
+
+.deleteScheme {
+    /*删除样式*/
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    background: #00c09e url(../../images/deleteScheme.png) no-repeat center;
+    border-radius: 50%;
+}
+
+
+/* 带删除样式结束*/
+
+.schemeSave {
+    width: 110px;
+    /* 保存模板*/
+    height: 30px;
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(255, 153, 0, 0.2) 0%, rgba(255, 102, 0, 0.2) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 153, 0, 0.2)), color-stop(100%, rgba(255, 102, 0, 0.2)));
+    background: -webkit-linear-gradient(top, rgba(255, 153, 0, 0.2) 0%, rgba(255, 102, 0, 0.2) 100%);
+    background: linear-gradient(to bottom, rgba(255, 153, 0, 0.2) 0%, rgba(255, 102, 0, 0.2) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,153,0,0.2)', endColorstr='rgba(255,102,0,0.2)', GradientType=0);
+    line-height: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    border: 1px solid rgba(255, 153, 0, 0.5);
+    color: rgba(255, 153, 0, 0.7);
+}
+
+.tabBox {
+    /* tab样式*/
+    width: 85px;
+    height: 30px;
+    border: 1px solid #0A578A;
+    text-align: center;
+    line-height: 30px;
+    color: #51A6E9;
+    cursor: pointer;
+    background-color: rgba(17, 57, 101, 1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tabBoxClick {
+    /* tab点击样式*/
+    width: 85px;
+    height: 31px;
+    border: 1px solid #0A578A;
+    border-bottom: 0px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFff;
+    cursor: pointer;
+    background-color: #07192B;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* tab标签样式修改   by fenghui */
+
+.GroupDiv {
+    width: 100%;
+    height: 32px;
+    margin: 10px 0 0 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.groupArrow {
+    border: 1px solid #043666;
+    background: -moz-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(37, 79, 121, 1)), color-stop(100%, rgba(8, 47, 88, 1)));
+    background: -webkit-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: linear-gradient(to bottom, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='rgba(37,79,121,1)', endColorstr='rgba(8,47,88,1)', GradientType=0);
+    display: inline-block;
+    height: 29px;
+    /*float: left;*/
+    width: 25px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.groupPrev {
+    margin-right: 5px;
+    /*float: left;*/
+    position: absolute;
+    left: 0;
+    box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+.groupNext {
+    margin-left: 5px;
+    /*float: right;*/
+    position: absolute;
+    right: 0;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+.leftArrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -6px;
+    z-index: 2;
+    border-top: 6px solid transparent;
+    border-right: 8px solid #8dc9f8;
+    border-bottom: 6px solid transparent;
+}
+
+.leftArrows:hover {
+    border-right: 8px solid orange;
+}
+
+.rightArrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -6px;
+    z-index: 2;
+    border-top: 6px solid transparent;
+    border-left: 8px solid #8dc9f8;
+    border-bottom: 6px solid transparent;
+}
+
+.rightArrows:hover {
+    border-left: 8px solid orange;
+}
+
+
+/*.leftArrows,.rightArrows{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.leftArrows{
+    background: url("../../images/leftArrow.png") no-repeat center;
+}
+.rightArrows{
+    background: url("../../images/rightArrow.png") no-repeat center;
+}*/
+
+.ul_div {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Group_li {
+    float: left;
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    border: 1px solid #043666;
+    margin-left: -1px;
+    font-weight: normal;
+    background: rgb(6, 23, 62);
+    color: #fff;
+    box-shadow: 4px -2px 5px 0px rgba(0, 0, 0, 0.4), inset 5px -3px 8px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+}
+
+.Group_li_click {
+    color: #eac44b;
+}
+
+.Group_li_span {
+    position: relative;
+    z-index: 4;
+}
+
+.selectShadow {
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    z-index: 3;
+    left: 31px;
+    width: 110px;
+    height: 30px;
+    background: #3680d5;
+    color: #eac44b;
+    border: 1px solid #043666;
+    transition: all .3s ease;
+}
+
+.pagehead {
+    /* 页面标题  */
+    position: absolute;
+    font-family: "微软雅黑", "Trebuchet MS", sans-serif;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 42px;
+    line-height: 43px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: #8dc9f8;
+    /*background: rgba(28, 85, 135,0.63);*/
+    background: url("../../images/pageHead_bg.png") repeat-x;
+}
+
+.pageTitle {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.current {
+    /* border-bottom:2px solid #f90;*/
+    border-bottom: 1px solid #ff7200;
+    height: 30px;
+    vertical-align: middle;
+    line-height: 30px;
+    background: rgba(255, 114, 0, 0.2);
+    color: orange;
+}
+
+.hover {
+    height: 30px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.hover:hover {
+    background: rgba(255, 114, 0, 0.1);
+}
+
+
+/* .content {
+    页面内容 
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 52px;
+    bottom: 0;
+    border: 1px solid #0c455b;
+    background: rgba(0, 0, 0, 0.2);
+    font-family: "微软雅黑", "Trebuchet MS", sans-serif;
+} */
+
+.fieldset {
+    border: 1px solid rgba(0, 0, 0, 1);
+    min-height: 50px;
+    width: 96%;
+    margin: 10px auto;
+    box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    background: none;
+    color: #ffffff;
+}
+
+.legend {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+.lis {
+    width: 18%;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    padding-left: 2%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.lisChecked {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.lis-input {
+    background: rgba(0, 41, 93, 0.6);
+    cursor: pointer;
+}
+
+.label {
+    cursor: pointer;
+}
+
+.lisText {
+    cursor: pointer;
+    float: right;
+    text-align: left;
+    width: 85%;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* 表格样式 */
+
+.table-style {
+    width: 100%;
+    table-layout: fixed;
+    border-right: 1px solid rgb(19, 56, 92);
+}
+
+th {
+    border-left: 1px solid rgb(19, 56, 92);
+    border-bottom: 1px solid rgb(19, 56, 92);
+    box-sizing: content-box;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(19, 56, 92);
+    line-height: 30px;
+    box-sizing: content-box;
+}
+
+.dark {
+    /* background: rgba(2, 156, 255, 0.3); */
+}
+
+.dark:hover {
+    background: rgba(2, 156, 255, 0.4);
+}
+
+.light {
+    /* background: rgba(2, 156, 255, 0.2); */
+}
+
+.light:hover {
+    background: rgba(2, 156, 255, 0.4);
+}
+
+.tdCon {
+    width: 100%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* 表格样式 */
+
+.table_style {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.caption {
+    /*background: rgba(2,156,255,0.1);*/
+    /* background: -moz-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(37, 79, 121, 1)), color-stop(100%, rgba(8, 47, 88, 1)));
+    background: -webkit-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    background: linear-gradient(to bottom, rgba(37, 79, 121, 1) 0%, rgba(8, 47, 88, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='rgba(37,79,121,1)', endColorstr='rgba(8,47,88,1)', GradientType=0); */
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 20px;
+    position: relative;
+    /*width: 100%;*/
+}
+
+.thead {
+    background: rgba(2, 156, 255, 0.3);
+    font-size: 14px
+}
+
+
+/*设置框斜纹统一样式*/
+
+.configDivWrap {
+    /* background: url("../../images/box_bg.png") repeat; */
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    /* border-radius: 5px; */
+    border: 1px solid #295398;
+    /* box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.1), inset 0px 1px 2px 1px rgba(0, 0, 0, 0.5); */
+    font-size: 14px;
+    transition: all 2s
+}
+
+.flex {
+    display: flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    flex-flow: row;
+}
+
+.configTitle {
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    background: #295398;
+    margin: 5px 0 0 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 2px 0 #000;
+    float: left;
+}
+
+.configUL {
+    float: left;
+    width: 80%;
+    height: 100%;
+    line-height: 39px;
+}
+
+.configLI {
+    float: left;
+    margin: 4px 25px;
+    position: relative;
+}
+
+
+/* 前端/频道选择框超出出现省略号 */
+
+#monAndSerSelected {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* 弹出框内容 */
+
+.dialogUL {
+    width: 80%;
+    margin: 10px auto 0;
+    font-size: 14px
+}
+
+.dialogLI {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.lisL {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+
+/* 下发协议等待  遮罩层 */
+
+.maskBox {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding-top: 49%;
+    z-index: 9999;
+    position: absolute;
+}
+
+
+/* 2017-01-09分页样式 */
+
+.pagination {
+    font-size: 80%;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    height: 30px;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 1px 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.pagination .current.prev,
+.pagination .current.next {
+    color: #999;
+    border-color: #014889;
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+    border: solid 1px #014889;
+    line-height: 20px;
+    height: 20px;
+}
+
+.listLi_span {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.textOver {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search_input {
+    width: 94%;
+    height: 25px;
+    margin: 2px 5px;
+    background: rgba(10, 42, 66, 0.8);
+    /* background: #063b58; */
+    border: 1px solid #00618e;
+    border-radius: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #80b3e8;
+}
+
+tr,
+th,
+td {
+    text-align: center;
+    height: 40px;
+}
+
+
+/* 台站树样式 */
+
+.el-tree {
+    background: none!important;
+    color: #fff!important;
+    font-size: 0.06rem!important;
+}
+
+.el-tree-node:focus>.el-tree-node__content,
+.el-tree-node__content:hover {
+    background: rgba(102, 213, 510, 0.5)!important;
+    /* background: rgba(24,64,69,0.9)!important; */
+}
+
+.ivu-message {
+    color: #495060!important;
+    z-index: 503!important
+}
+
+
+/* .ivu-upload{
+    display:flex;  
+    flex-direction:row;
+    align-items:center;
+} */
+
+.ivu-upload-list {
+    position: absolute!important;
+    left: 130px!important;
+    top: 0px!important;
+}
+
+.el-carousel {
+    height: 100%!important;
+}
+
+.el-carousel__arrow {
+    background: rgba(230, 230, 218, 0.3)!important;
+}
+
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+    background: rgba(102, 213, 510, 0.5)!important;
+}
+
+.flexSpan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff
+}
+
+.districtLevel1 {
+    color: rgb(96, 221, 251)
+}
+
+.districtLevel2 {
+    color: #8cbeff
+}
+
+.districtLevel3 {
+    color: rgb(241, 210, 103)
+}
+
+.ivu-modal-confirm-body {
+    color: #e1e1e1!important;
+}
+/* pop-element*/
+.el-select-dropdown{
+    width:20%;
+    /* display: block!important; */
+    z-index: 200522!important;
+}
+.el-select .el-input.is-focus .el-input__inner{
+    height: 35px;
+    background: rgba(2, 156, 255, 0.1);
+    line-height: 35px;
+    border-color: #0148AF
+}
+.el-select .el-input__inner{
+    height: 35px;
+    background: rgba(2, 156, 255, 0.1);
+    line-height: 35px;
+    border-color: #0148AF
+}
+.el-select .el-input__inner:hover{
+    border-color: #0148AF
+}
+.el-select__tags-text{
+    color:black
+}
+.el-scrollbar__wrap {
+    overflow: auto;
+}
+.el-select-dropdown__list{
+    padding-top: 0;
+    padding-bottom:10px
+}
+.el-popper{
+    z-index: 201733!important;
+}
+/*pentagram 红色的五角星*/
+
+.pentagram {
+    display: inline;
+    color: red;
+    margin-left: 3px;
+    float: right;
+}
+
+.vertical-center-modal .ivu-modal {
+    /* margin:0!important;*/
+}
+
+.ivu-modal-confirm-head-title {
+    color: #fff!important;
+}
+
+.demo-spin-icon-load {
+    animation: ani-demo-spin 1s linear infinite!important;
+}
+
+.ivu-spin-fix {
+    background: rgba(0, 0, 0, 0.8)!important;
+}
+
+.ivu-spin-text div {
+    font-size: 0.07rem!important;
+}
+
+.radio_btn {
+    /* background: rgb(197,200,205);
+    border: 1px solid rgba(19, 58, 112, 0.7); */
+    background: rgb(19, 42, 89);
+    border: 1px solid rgb(1, 212, 246);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    position: relative;
+    margin-left: 2px;
+    margin-right: 3px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.radio_btn input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio_btn span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.radio_btn input[type="radio"]+span {
+    background: none;
+}
+
+.radio_btn input[type="radio"]:checked+span {
+    border: 1px solid rgba(47, 112, 202, 0.7);
+    background: rgb(232, 186, 39)
+}
+
+.radioLabel {
+    font-size: 16px;
+    margin-left: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: LEDFont;
+    src: url('/static/css/lcd_lcd_mono/LCDWinTT/LCD-BOLD.TTF');
+    font-weight: bold;
+}
+
+#WebPhoneCtrl {
+    height: 0;
+    float: left;
+}
+
+.table-class th {
+    /* border-bottom: 1px solid rgb(4, 63, 98)!important; */
+    font-size: 0.06rem!important;
+    height: 40px!important;
+    font-weight: bold!important
+}
+
+.table-class td {
+    /* border-bottom: 1px solid rgb(4, 63, 98)!important; */
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    white-space: nowrap!important;
+    font-size: 0.06rem!important;
+}
+
+.BMap_cpyCtrl {
+    display: none;
+}
+
+
+/* .fontColorChange {
+    filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#75f8f5, endColorstr=#25cdf3);
+} */

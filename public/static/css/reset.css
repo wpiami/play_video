@@ -1,0 +1,357 @@
+/* CSS Document */
+
+
+/* basic */
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+form,
+ol,
+ul,
+li,
+fieldset,
+input,
+textarea,
+caption {
+    margin: 0;
+    padding: 0;
+}
+
+::-ms-clear,
+ ::-ms-reveal {
+    display: none;
+}
+
+address,
+cite,
+code,
+dfn,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+var,
+b {
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font: normal 12px/1.5em 'SimHei';
+    color: red;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+/* table */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 12px/1.5em 'SimHei';
+}
+
+td,
+th,
+caption {
+    padding: 0;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: left;
+}
+
+
+/* input */
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+input [type=text] {
+    height: 0;
+    border: 0;
+}
+
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    font-size: 12px;
+    margin: 0;
+}
+
+ :focus {
+    outline: none;
+}
+
+
+/*for IE*/
+
+ ::-moz-focus-inner {
+    border-color: transparent;
+}
+
+
+/*for mozilla*/
+
+
+/* img */
+
+a img,
+ :link img,
+ :visited img,
+fieldset {
+    border: 0;
+}
+
+
+/* before after */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+}
+
+blockquote,
+q {
+    quotes: "";
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* float */
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.cl {
+    clear: both;
+}
+
+.cl:before {
+    clear: both;
+}
+
+.cl:after {
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.red {
+    color: #f00;
+}
+
+
+/* margin padding */
+
+.m10 {
+    margin: 10px;
+}
+
+.mtb10 {
+    margin: 10px 0;
+}
+
+.mrl8 {
+    margin: 0 8px;
+}
+
+.mr8 {
+    margin-right: 8px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mt4 {
+    margin-top: 4px;
+}
+
+.mrl20 {
+    margin: 10px 40px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml15 {
+    margin-left: -15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pt4 {
+    padding-top: 4px;
+}
+
+.pl7 {
+    padding-left: 7px;
+}
+
+.mt6 {
+    margin-top: 6px;
+}
+
+.ml7 {
+    margin-left: 7px;
+}
+
+
+/* CSS Document */
+
+
+/* not designer make css add by zhangwei*/
+
+.showChild {
+    display: none;
+}
+
+
+/*.addItem{ background-color: #0000D9;}
+.lastItem {background-color: #D90000;}*/
+
+.addItem {
+    color: #87CEFA;
+}
+
+.lastItem {
+    color: #FFB6C1;
+}
+
+.lw {
+    width: 100px;
+}
+
+.td_col {
+    background-color: #CED8E3;
+}
+
+.spread {
+    margin: -2px 3px 0px 30px;
+    vertical-align: middle;
+    cursor: pointer;
+    font: 0;
+    width: 12px;
+    height: 12px;
+    background: url("../../resources/images/spread.png") no-repeat center;
+    display: inline-block;
+}
+
+.draw {
+    margin: -2px 3px 0px 30px;
+    vertical-align: middle;
+    cursor: pointer;
+    font: 0;
+    width: 12px;
+    height: 12px;
+    background: url("../../resources/images/draw.png") no-repeat center;
+    display: inline-block;
+}
+
+.border_hidden {
+    border-width: 1px 0px 1px 0px;
+}
+
+.border_right_hidden {
+    border-width: 1px 0px 1px 1px;
+}
+
+.border_left_hidden {
+    border-width: 1px 1px 1px 0px;
+}
+
+
+/* 设置滚动条的样式 */
+
+* {
+    scrollbar-face-color: #205782;
+    /*面子*/
+    scrollbar-arrow-color: #1bdffe;
+    /*箭头*/
+    scrollbar-3dlight-color: #1d2e4e;
+    /*最外左*/
+    scrollbar-highlight-color: #1d2e4e;
+    /*左二*/
+    scrollbar-shadow-color: #1bdffe;
+    /*右二*/
+    scrollbar-darkshadow-color: #C0C0C0;
+    /*右一*/
+    scrollbar-track-color: #1d2e4e;
+    /*滑道*/
+}
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* 滚动槽 */
+
+ ::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0 0 6px #000c34 inset;
+    border-radius: 10px;
+}
+
+
+/* 滚动条滑块 */
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #052253;
+    -webkit-box-shadow: inset 0 0 6px rgba(02, 30, 83, 0.8);
+}
+
+ ::-webkit-scrollbar-thumb:window-inactive {
+    /* background: rgba(255,0,0,0.4); */
+}
